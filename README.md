@@ -1,4 +1,6 @@
 # glob4go
+[![Build Status](https://travis-ci.org/co89757/glob4go.svg?branch=master)](https://travis-ci.org/co89757/glob4go)
+
 A lightweight glob wildcard pattern matching utility for Go, when regex is an overkill 
 ## Installation 
 ```
