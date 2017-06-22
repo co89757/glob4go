@@ -17,7 +17,7 @@ The glob syntax is largely similar to UNIX globbing execept for a few unsupporte
 ## Example
 Currently, the API of the pacakge is really simple:
 ```go
-glob4go.Glob(pattern, str string, ignoreCase bool) 
+glob4go.Glob(pattern, str []byte, ignoreCase bool) 
 ```
 Here is an example usage 
 
@@ -38,3 +38,6 @@ match = glob4go.Glob(pattern, s2, true) // true, it is a match when ignore case
 
 ```
 
+## TO-DO
+* Performance and benchmarking 
+* Add unicode support 
