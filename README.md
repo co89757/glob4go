@@ -12,6 +12,7 @@ The glob syntax is largely similar to UNIX globbing execept for a few unsupporte
  - `?` :matches a single character
  - `[...]` :matches a range/group of characters. For example, `[0-9]` matches any single-digit number, `[axz]` matches any character in 'a','x','z'
  - `[^...]` :inverse range/group match. The inverse of the above range match case. It matches any character not in the range 
+ - all keywords above can be escaped by `\`, i.e. `\?` matches a literal `?` 
 
 ## Example
 Currently, the API of the pacakge is really simple:
