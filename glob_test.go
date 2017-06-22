@@ -51,3 +51,14 @@ func TestMatchAll(t *testing.T) {
 	assert.True(t, Glob(pattern, s1, false), "* should match all")
 	assert.True(t, Glob(pattern, s2, false), "* should match all")
 }
+
+func TestSideEffectFreeness(t *testing.T) {
+	pattern := []byte("abc*f?")
+	s := []byte("abcuidaf8")
+	pLen := len(pattern)
+	sLen := len(s)
+	match := Glob(pattern, s, false)
+	assert.True(t, match, "pattern is a match")
+	assert.Equal(t, pLen, len(pattern), "the glob() func must not change input slice")
+	assert.Equal(t, sLen, len(s), "the glob() func must not change input slice")
+}
